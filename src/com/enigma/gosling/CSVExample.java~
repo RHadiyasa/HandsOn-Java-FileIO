@@ -7,8 +7,8 @@ import java.util.Scanner;
 public class CSVExample {
     public static void main(String[] args) {
         CSVPerson csvPerson = new CSVPerson();
-//        csvPerson.writePerson(new Person(1,"Rafi", 25));
-//        csvPerson.writePerson(new Person(2,"Hadiyasa", 26));
+        csvPerson.writePerson(new Person(1,"Rahma", 25));
+        csvPerson.writePerson(new Person(3,"Rani", 26));
         List<Person> people = csvPerson.getAllPerson();
 
         print(people);

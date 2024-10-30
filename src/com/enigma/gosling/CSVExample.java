@@ -7,12 +7,20 @@ import java.util.Scanner;
 public class CSVExample {
     public static void main(String[] args) {
         CSVPerson csvPerson = new CSVPerson();
-        csvPerson.writePerson(new Person(1,"Rahma", 25));
-        csvPerson.writePerson(new Person(3,"Rani", 26));
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("ID: ");
+        int personId = Integer.parseInt(scanner.nextLine());
+        System.out.print("Name: ");
+        String name = scanner.nextLine();
+        System.out.print("Age: ");
+        int age = Integer.parseInt(scanner.nextLine());
+
+        csvPerson.writePerson(new Person(personId, name, age));
+//        csvPerson.writePerson(new Person(3,"Rani", 26));
         List<Person> people = csvPerson.getAllPerson();
 
         print(people);
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Wanna delete? (Y/N): ");
         char input = scanner.nextLine().charAt(0);
         if (input == 'Y' || input == 'y'){
